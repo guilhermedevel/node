@@ -1,7 +1,7 @@
-import Mathgz from './Mathgz';
+import validator from "validator";
 
-let n1: number = 10;
-let n2: number = 2;
+let ip: string = '192.0.0.2';
+let email: string = 'gzarzur@dev.com';
 
-console.log(`SOMA: ${Mathgz.sum(n1, n2)}`);
-console.log(`SUBTRAÇÃO: ${Mathgz.sub(n1, n2)}`);
+console.log(`Verificando se o email ${email} é valido: ${validator.isEmail(email)}`);
+console.log(`Verificando se o ip ${ip} é válido: ${validator.isIP(ip)}`);

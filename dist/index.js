@@ -3,8 +3,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const Mathgz_1 = __importDefault(require("./Mathgz"));
-let n1 = 10;
-let n2 = 2;
-console.log(`SOMA: ${Mathgz_1.default.sum(n1, n2)}`);
-console.log(`SUBTRAÇÃO: ${Mathgz_1.default.sub(n1, n2)}`);
+const validator_1 = __importDefault(require("validator"));
+let ip = '192.0.0.2';
+let email = 'gzarzur@dev.com';
+console.log(`Verificando se o email ${email} é valido: ${validator_1.default.isEmail(email)}`);
+console.log(`Verificando se o ip ${ip} é válido: ${validator_1.default.isIP(ip)}`);
