@@ -1,4 +1,4 @@
-const Mathgz = require('./Mathgz');
+import * as Mathgz from './Mathgz';
 
 let n1: number = 10;
 let n2: number = 2;
