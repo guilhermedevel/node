@@ -1,6 +1,6 @@
 import validator from "validator";
 
-let ip: string = '192.0.0.2';
+let ip: string = '192.0.0.256';
 let email: string = 'gzarzur@dev.com';
 
 console.log(`Verificando se o email ${email} é valido: ${validator.isEmail(email)}`);
