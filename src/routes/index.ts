@@ -3,11 +3,19 @@ import { Router, Request, Response } from "express";
 const router = Router();
 
 router.get('/', (req: Request, res: Response) =>{
-    let name: String = 'Guilherme';
+    let name: string = 'Guilherme';
+    let age: number = 34;
+    let showOld: boolean = false;
+
+    if (age > 17) {
+        showOld = true;
+    }
 
     res.render('home', {
         name,
-        lastName: 'Zarzur'
+        lastName: 'Zarzur',
+        age,
+        showOld
     });
 });
 
