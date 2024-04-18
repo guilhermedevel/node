@@ -5,7 +5,7 @@ const router = Router();
 
 router.get('/', (req: Request, res: Response) =>{
     let name: string = 'Guilherme';
-    let age: number = 34;
+    let age: number = 17;
     let showOld: boolean = false;
 
     if (age > 17) {
@@ -22,11 +22,7 @@ router.get('/', (req: Request, res: Response) =>{
             {title: 'Produto Y', price: 20.00},
             {title: 'Produto Z', price: 30.00},
         ],
-        frasesDoDia: [
-            'Uma bela frase motivacional',
-            'Outra frase para te manter motivado',
-            'blablabla'
-        ]
+        frasesDoDia: []
     });
 });
 

@@ -11,19 +11,25 @@
     {{#showOld}}
         Você tem {{age}} anos?
     {{/showOld}}
+    {{^showOld}}
+        Você é menor de idade?
+    {{/showOld}}
     <hr/>
 
-    {{#products}}
-        <ul>
+    <ul>
+        {{#products}}
             <li>{{title}} - R$ {{price}}</li>
-        </ul>
-    {{/products}}
+        {{/products}}
+    </ul>
     <hr/>
 
-    {{#frasesDoDia}}
         <ul>
-            <li>{{.}}</li>
+            {{#frasesDoDia}}
+                <li>{{.}}</li>
+            {{/frasesDoDia}}
+            {{^frasesDoDia}}
+                <li>Não há frases motivacionas hoje</li>
+            {{/frasesDoDia}}
         </ul>
-    {{/frasesDoDia}}
 </body>
 </html>
