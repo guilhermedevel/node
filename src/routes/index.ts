@@ -1,4 +1,5 @@
 import { Router, Request, Response } from "express";
+import { title } from "process";
 
 const router = Router();
 
@@ -9,13 +10,23 @@ router.get('/', (req: Request, res: Response) =>{
 
     if (age > 17) {
         showOld = true;
-    }
+    };
 
     res.render('home', {
         name,
         lastName: 'Zarzur',
         age,
-        showOld
+        showOld,
+        products: [
+            {title: 'Produto X', price: 10.00},
+            {title: 'Produto Y', price: 20.00},
+            {title: 'Produto Z', price: 30.00},
+        ],
+        frasesDoDia: [
+            'Uma bela frase motivacional',
+            'Outra frase para te manter motivado',
+            'blablabla'
+        ]
     });
 });
 

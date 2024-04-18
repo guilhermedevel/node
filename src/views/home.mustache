@@ -11,5 +11,19 @@
     {{#showOld}}
         Você tem {{age}} anos?
     {{/showOld}}
+    <hr/>
+
+    {{#products}}
+        <ul>
+            <li>{{title}} - R$ {{price}}</li>
+        </ul>
+    {{/products}}
+    <hr/>
+
+    {{#frasesDoDia}}
+        <ul>
+            <li>{{.}}</li>
+        </ul>
+    {{/frasesDoDia}}
 </body>
 </html>
