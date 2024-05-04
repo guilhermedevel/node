@@ -12,7 +12,7 @@ router.get('/', (req: Request, res: Response) =>{
         showOld = true;
     };
 
-    res.render('home', {
+    res.render('pages/home', {
         name,
         lastName: 'Zarzur',
         age,
@@ -27,11 +27,11 @@ router.get('/', (req: Request, res: Response) =>{
 });
 
 router.get('/contato', (req: Request, res: Response) => {
-    res.send('Página de contato')
+    res.render('pages/contato')
 });
 
 router.get('/sobre', (req: Request, res: Response) => {
-    res.send('Página institucional sobre a empresa')
+    res.render('pages/sobre')
 });
 
 export default router;
