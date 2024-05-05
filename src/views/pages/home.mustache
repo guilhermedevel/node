@@ -8,22 +8,33 @@
     {{^showOld}}
         Você é menor de idade?
     {{/showOld}}
-    <hr/>
 
+    <hr/>
+    <h2>Produtos</h2>
     <ul>
         {{#products}}
             {{>partials/productItem}}
         {{/products}}
     </ul>
+
     <hr/>
 
-        <ul>
-            {{#frasesDoDia}}
-                <li>{{.}}</li>
-            {{/frasesDoDia}}
-            {{^frasesDoDia}}
-                <li>Não há frases motivacionas hoje</li>
-            {{/frasesDoDia}}
-        </ul>
+    <h2>Produtos a partir de R$ 11,00</h2>
+    <ul>
+        {{#filteredProducts}}
+            {{>partials/productItem}}
+        {{/filteredProducts}}
+    </ul>
+
+    <hr/>
+
+    <ul>
+        {{#frasesDoDia}}
+            <li>{{.}}</li>
+        {{/frasesDoDia}}
+        {{^frasesDoDia}}
+            <li>Não há frases motivacionas hoje</li>
+        {{/frasesDoDia}}
+    </ul>
         
 {{>partials/footer}}
